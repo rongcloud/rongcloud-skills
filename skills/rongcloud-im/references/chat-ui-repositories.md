@@ -4,15 +4,15 @@
 
 ## Web
 
-**仓库**：``
+**仓库**：暂未开源
 
 ## Android
 
-**仓库**：`
+**仓库**：`https://github.com/rongcloud/android-ui-sdk-set`
 
 ## iOS
 
-**仓库**：``
+**仓库**：`https://github.com/rongcloud/ios-ui-sdk-set.git`
 
 ## Flutter
 

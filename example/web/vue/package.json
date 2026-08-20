@@ -1,0 +1,20 @@
+{
+  "name": "rongcloud-im-vue",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@rongcloud/engine": "^5.44.0",
+    "@rongcloud/imlib-next": "^5.44.0",
+    "vue": "^3.5.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.0",
+    "vite": "latest"
+  }
+}

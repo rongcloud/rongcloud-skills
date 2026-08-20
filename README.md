@@ -6,7 +6,7 @@
 
 ## 快速链接
 
-- [注册/登录融云控制台](https://console.rongcloud.cn/agile/register?utm_source=ConsolegithubChatSDKSkills) 获取 App Key
+- [注册/登录融云控制台](https://console.rongcloud.cn/agile/register) 获取 App Key
 - [官方文档](https://docs.rongcloud.cn/)
 - [Demo 应用](https://sealtalk-cn.wegenmi.com/#/?channel=direct)
 - [融云官网](https://www.rongcloud.cn/)

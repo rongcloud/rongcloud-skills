@@ -4,7 +4,7 @@
 
 ## Cross-doc differences worth knowing before you fetch
 
-- **频道置顶**与 Android 不同：iOS Chat UI 仅显示已置顶频道，**没有内置置顶/取消置顶 UI**；操作需要 Chat SDK 频道 API。不要承诺 iOS 内置置顶 UI。（参见 `features/stick-to-top.md`。）
+- **频道置顶**与 Android 不同：iOS IMKit 仅显示已置顶频道，**没有内置置顶/取消置顶 UI**；操作需要 IMLib 频道 API。不要承诺 iOS 内置置顶 UI。（参见 `features/stick-to-top.md`。）
 - **Data center**: defaults to Singapore — `areaCode` must be set explicitly when the App Key belongs elsewhere, or connection silently targets the wrong region. (See `init.md`.)
 
 ## Doc paths (fetch on demand)
@@ -13,4 +13,4 @@
 - 个人资料：`/chatui-ios/user/userinfo.md`
 - 频道列表：`/chatui-ios/key-functions/conversation-list.md`
 - 功能：`/chatui-ios/features/` → `message-mention.md`、`message-receipt.md`、`online-status.md`、`stick-to-top.md`、`typing-status.md`
-- Chat SDK（聊天室 / 超级群 / 置顶/取消置顶操作 / 消息置顶）：`/chatsdk-ios.md`
+- IMLib（聊天室 / 超级群 / 置顶/取消置顶操作 / 消息置顶）：`/chatsdk-ios.md`

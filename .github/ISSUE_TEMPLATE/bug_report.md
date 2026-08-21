@@ -27,7 +27,7 @@ assignees: ""
 ## 环境信息
 
 - 平台：<!-- Android、iOS、Web 或 Flutter -->
-- SDK 或 Chat UI 包及版本：
+- SDK 或 IMKit 包及版本：
 - 技能版本或提交：
 - 操作系统及版本：
 - 浏览器及版本（如适用）：

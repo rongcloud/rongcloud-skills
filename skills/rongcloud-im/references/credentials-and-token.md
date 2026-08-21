@@ -23,7 +23,7 @@ App Key 和 Token 是可运行初始化及连接代码的必需项。缺少凭�
 
 ### 登录 UI 属于应用层（不是 SDK）
 
-如果原型、截图或功能清单出现登录表单（手机号、国家码、密码、2FA/OTP、二维码登录、“保持登录”），将这些界面归类为应用层，并视为超出 `nexconn-chat` 范围。Chat SDK 只接收服务端签发的 **Token**，不提供登录或注册界面、密码/2FA/OTP 流程、二维码登录配对或会话持久化 UI。
+如果原型、截图或功能清单出现登录表单（手机号、国家码、密码、2FA/OTP、二维码登录、“保持登录”），将这些界面归类为应用层，并视为超出 `rongckoud-im` 范围。IMLib 只接收服务端签发的 **Token**，不提供登录或注册界面、密码/2FA/OTP 流程、二维码登录配对或会话持久化 UI。
 
 推荐拆分：应用负责自己的认证服务；认证成功后，应用服务端签发绑定已认证用户 ID 的 Nexconn Token；客户端将 Token 传给 `NCEngine.connect` 或对应平台 API。不要为了匹配竞品截图而虚构 SDK 登录 API。
 
@@ -63,7 +63,7 @@ Token 必须通过服务端 API 流程获取。不要生成在前端/移动端�
 
 ## Postman 测试路径
 
-如果尚无应用服务端且用户想快速验证 Demo，说明生产 Token 必须来自应用服务端，并建议使用官方 Postman Collection：https://docs.rongcloud.cn/platform-chat-api/explore-api-with-postman。不要提交真实 Token、App Secret 或签名请求材料。
+如果尚无应用服务端且用户想快速验证 Demo，说明生产 Token 必须来自应用服务端，并建议使用官方 Postman Collection：https://docs.rongcloud.cn/platform-chat-api/api-explorer/explore-api-with-postman。不要提交真实 Token、App Secret 或签名请求材料。
 
 ## 安全边界
 

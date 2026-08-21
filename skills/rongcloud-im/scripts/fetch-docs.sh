@@ -11,9 +11,9 @@
 #                  默认值为 7 天。
 #   --prefetch     批量获取精选核心文档到 ./references/cache。
 #                  默认集合为 "core"。可用集合：
-#                      core     ChatUI 快速入门（web/android/ios）+ Chat/Call 术语表 + 四个平台的 Chat SDK 快速入门
+#                      core     ChatUI 快速入门（web/android/ios）+ Chat/Call 术语表 + 四个平台的 IMLib 快速入门
 #                      ui       仅 ChatUI 快速入门
-#                      sdk      仅 Chat SDK 快速入门
+#                      sdk      仅 IMLib 快速入门
 #                      glossary 仅 Chat 和 Call 术语表
 #
 # Caching: a cached file is reused only if it exists AND is younger than the

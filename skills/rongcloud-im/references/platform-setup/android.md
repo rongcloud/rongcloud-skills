@@ -12,4 +12,4 @@
 - 个人资料：`/android-imkit/user/userinfo.md`
 - 会话列表：`/android-imkit/key-functions/conversation-list.md`、`/android-imkit/customization/conversation-list-data-processor.md`
 - 功能：`/android-imkit/features/` → `message-mention.md`、`message-receipt.md`、`online-status.md`、`stick-to-top.md`、`typing-status.md`
-- IMLib（聊天室 / 超级群）：`/chatsdk-android.md`
+- IMLib（聊天室 / 超级群等）：`/android-imlib.md`、`/android-imlib/import.md`、`/android-imlib/init.md`、`/android-imlib/quickstart.md`

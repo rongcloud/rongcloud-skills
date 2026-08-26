@@ -32,11 +32,10 @@
 # 从项目根目录运行
 cd /path/to/your/project
 
-# 克隆目标平台仓库（此处以 Android 为例）
-git clone https://github.com/rongcloud/android-ui-sdk-set
-
-# 也可以先 Fork 到团队仓库，再克隆 Fork
-git clone <your-forked-repo-url>
+# 设置源仓库（此处以 Android 官方仓库为例）
+# 使用团队 Fork 时，将下面的 URL 替换为 Fork 地址
+imkit_repository_url="https://github.com/rongcloud/android-ui-sdk-set"
+git clone "${imkit_repository_url}" imkit-android
 
 # 进入仓库目录
 cd imkit-android

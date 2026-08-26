@@ -53,18 +53,7 @@
 
 ### 截图驱动实现（IMKit）
 
-收到 2 张或更多截图时，先执行 `image-analysis-guide.md` 的清点、丢弃品牌/营销、拆分认证/通话、去重流程，并用 `feature-pattern-map.md` 给现代即时通讯功能分层。然后建立一张完整差距表：
-
-| 功能 | 分类 | 说明 |
-| --- | --- | --- |
-| 会话列表、消息气泡、输入区 | Built-in | IMKit 无需配置即可渲染 |
-| 消息菜单、输入工具栏 | Configurable | 通过 hook、菜单、开关、主题或扩展点 |
-| 气泡背景色 | Configurable | 样式 token/主题/气泡配置 |
-| Web 气泡布局深度调整 | Pending review | 先检查组件覆盖和消息气泡文档；公开扩展点不满足时再评估 IMLib |
-| 搜索栏、标签过滤、在线状态 | Application chrome | 在外围由应用实现 |
-| 定时发送、链接预览、已保存消息 | Application-server | 需要应用后端状态或任务，不能编造客户端 API |
-| 回应、消息置顶、在线状态 | Pending review | 获取文档或在实现前标记待办 |
-| Web 语音消息 | Unsupported | 能力矩阵明确标记不支持 |
+收到 2 张或更多截图时，先执行 [截图分析指南](./image-analysis-guide.md) 的清点、丢弃品牌/营销、拆分认证/通话和去重流程，再按该指南定义的表结构输出完整差距表。功能分类与验证状态以 [功能模式映射](./feature-pattern-map.md) 为准，并根据目标平台的官方文档和项目安装版本补充说明。
 
 在写代码前将差距表交给用户确认；对 Constrained 和 Unsupported 项明确说明接受限制、改用 IMLib 或放弃需求的取舍。确认后挂载 provider、应用配置并构建外围应用组件；不支持项必须明确告知并跳过，不得静默省略或编造变通方案。
 

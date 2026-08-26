@@ -10,8 +10,10 @@
   },
   "dependencies": {
     "@rongcloud/engine": "^5.44.0",
+    "@rongcloud/im-kit": "^5.44.0",
     "@rongcloud/imlib-next": "^5.44.0",
-    "vue": "^3.5.0"
+    "vue": "^3.5.0",
+    "vue-router": "^4.6.0"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.0",

@@ -1,40 +1,35 @@
 <template>
   <main class="app-shell">
-    <!-- 连接成功后渲染 IMKit 主界面(含会话列表 + 聊天区) -->
-    <rc-imkit-app-provider v-if="status === 'connected'" class="im-app" />
-
-    <div v-else class="im-placeholder">
-      <p v-if="status === 'error'">IM 连接失败:{{ errorMsg }}</p>
-      <p v-else>正在连接融云 IM 服务…</p>
-    </div>
+    <nav class="app-nav">
+      <a
+        href="#/imlib"
+        :class="{ 'router-link-active': isActive('/imlib') }"
+        @click.prevent="go('/imlib')"
+      >IMLib 自定义 UI</a>
+      <a
+        href="#/imkit"
+        :class="{ 'router-link-active': isActive('/imkit') }"
+        @click.prevent="go('/imkit')"
+      >IMKit 示例</a>
+    </nav>
+    <RouterView class="app-view" />
   </main>
 </template>
 
 <script setup>
-import { onMounted, onUnmounted, ref } from 'vue';
-import { initIM, destroyIM } from './im';
+import { RouterView } from 'vue-router';
 
-const status = ref('connecting');
-const errorMsg = ref('');
+const isActive = (path) => window.location.hash.startsWith(`#${path}`);
 
-onMounted(async () => {
-  try {
-    await initIM({
-      onStatusChange: (s) => {
-        // 断线重连期间保持界面挂载,仅首次连接前显示占位
-        if (s === 'connected') status.value = 'connected';
-      },
-    });
-    status.value = 'connected';
-  } catch (err) {
-    status.value = 'error';
-    errorMsg.value = err.message;
-  }
-});
-
-onUnmounted(() => {
-  destroyIM();
-});
+/**
+ * IMKit 与 IMLib 两套示例通过 location 整页跳转切换:
+ * 每个页面拥有独立的 SDK 初始化与连接生命周期,互不干扰。
+ */
+function go(path) {
+  if (isActive(path)) return;
+  window.location.hash = `#${path}`;
+  window.location.reload();
+}
 </script>
 
 <style>
@@ -43,24 +38,36 @@ body,
 #app {
   height: 100%;
   margin: 0;
+  font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif;
 }
 
 .app-shell {
-  height: 100%;
-}
-
-.im-app {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
-.im-placeholder {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
   height: 100%;
-  color: #666;
+}
+
+.app-nav {
+  display: flex;
+  gap: 16px;
+  padding: 8px 16px;
+  border-bottom: 1px solid #e5e5e5;
+  background: #fafafa;
   font-size: 14px;
+}
+
+.app-nav a {
+  color: #666;
+  text-decoration: none;
+}
+
+.app-nav a.router-link-active {
+  color: #0f6dff;
+  font-weight: 600;
+}
+
+.app-view {
+  flex: 1;
+  min-height: 0;
 }
 </style>

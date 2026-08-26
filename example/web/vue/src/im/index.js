@@ -1,6 +1,7 @@
 import * as RongIMLib from '@rongcloud/imlib-next';
 import * as RCIMKit from '@rongcloud/im-kit';
-import { APP_KEY, TEST_TOKEN } from './config';
+import { TEST_TOKEN } from './config';
+import { ensureIMLibInit } from './core';
 import { hooks } from './hooks';
 
 let kitApp = null;
@@ -14,12 +15,8 @@ export async function initIM({ onStatusChange } = {}) {
     return { kitApp, userId: kitApp.getCurrentUserId() };
   }
 
-  // 1. 初始化 IMLib(App Key 属于中国数据中心,无需传区域码)
-  RongIMLib.init({
-    appkey: APP_KEY,
-    // 集成验证期间输出 DEBUG 日志,上线前请改为 RongIMLib.LogL.WARN
-    logOutputLevel: RongIMLib.LogL.DEBUG,
-  });
+  // 1. 初始化 IMLib(与 IMLib 示例页共用初始化守卫,全生命周期仅 init 一次)
+  ensureIMLibInit();
 
   // 2. 初始化 Web IMKit,传入 Hooks
   kitApp = RongIMLib.installPlugin(RCIMKit.RCKitInstaller, {

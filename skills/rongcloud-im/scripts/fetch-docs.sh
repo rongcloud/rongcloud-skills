@@ -30,7 +30,7 @@ CACHE_DIR="${REFERENCES_DIR}/cache"
 MAX_RETRIES=3
 FORCE=0
 # Identify requests as originating from this skill (sent on every curl call).
-CURL_HEADERS=(-A "rongcloud-im-skill/1.0.0 (fetch-docs)")
+CURL_HEADERS=(-A "rongcloud-im-skill/1.0.1 (fetch-docs)")
 # Cache staleness threshold in days. 0 = never expire (legacy permanent cache).
 # llms.txt index: 1 day, other docs: 7 days
 INDEX_MAX_AGE_DAYS=1

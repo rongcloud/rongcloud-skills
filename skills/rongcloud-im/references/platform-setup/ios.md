@@ -9,6 +9,7 @@
 
 ## 文档路径（按需获取）
 
+- 能力目录：按 [功能清单使用规则](../feature-lists.md) 获取 `/ios-imkit/feature-list.md` 或 `/ios-imlib/feature-list.md`，再获取清单指向的功能页
 - 核心：`/ios-imkit.md`、`/ios-imkit/import.md`、`/ios-imkit/init.md`、`/ios-imkit/quickstart.md`、`/ios-imkit/quickstart-swift.md`、`/ios-imkit/release-notes.md`
 - 个人资料：`/ios-imkit/user/userinfo.md`
 - 会话列表：`/ios-imkit/key-functions/conversation-list.md`

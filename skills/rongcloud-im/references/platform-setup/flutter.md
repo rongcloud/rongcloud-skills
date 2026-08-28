@@ -10,6 +10,7 @@
 
 ## 文档路径（按需获取）
 
+- 能力目录：按 [功能清单使用规则](../feature-lists.md) 获取 `/flutter-imkit/feature-list.md` 或 `/flutter-imlib/feature-list.md`，再获取清单指向的功能页
 - 核心：`/flutter-imkit.md`、`/flutter-imkit/import.md`、`/flutter-imkit/quickstart.md`
 - 关键功能：`/flutter-imkit/key-functions/conversation-list.md`、`/flutter-imkit/key-functions/conversation.md`
 - 个人资料：`/flutter-imkit/user/userinfo.md`、`/flutter-imkit/user/group-info.md`

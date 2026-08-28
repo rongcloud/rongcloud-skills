@@ -10,6 +10,7 @@
 
 ## 文档路径（按需获取）
 
+- 能力目录：按 [功能清单使用规则](../feature-lists.md) 获取 `/web-im-kit/feature-list.md` 或 `/web-imlib/feature-list.md`，再获取清单指向的功能页
 - 核心：`/web-im-kit.md`、`/web-im-kit/quickstart.md`、`/web-im-kit/release-notes.md`
 - 用户资料/数据：`/web-im-kit/user/hooks.md`、`/web-im-kit/user/overview.md`、`/web-im-kit/user/update.md`
 - UI/扩展：`/web-im-kit/components/overview.md`、`/web-im-kit/components/override-component.md`、`/web-im-kit/chat-ui/message-bubble.md`、`/web-im-kit/chat-ui/editor.md`

@@ -23,12 +23,14 @@
 | iOS | `Podfile`、`*.xcodeproj`、`Package.swift` |
 | Web | `package.json`、`tsconfig.json`、框架配置文件 |
 | Flutter | `pubspec.yaml` |
+| React Native | `package.json`、`ios/Podfile`、`android/build.gradle` 或 Gradle 模块文件 |
+| uni-app | `manifest.json`、`pages.json`、`package.json`（如有）和 HBuilderX 项目配置 |
 
-用 `rg` 搜索初始化封装、已安装包和版本、IMKit 定制点、Token 获取逻辑、本地化和 UI 文案规范。识别平台后先阅读对应平台导航文件，再确认 SDK/会话类型选择。
+用 `rg` 搜索初始化封装、已安装包和版本、IMKit 定制点、Token 获取逻辑、本地化和 UI 文案规范。React Native 需确认 `@rongcloud/react-native-im-wrapper` 版本；uni-app 需确认使用的是 Web IMKit 依赖还是 `RCUniIMV2` 原生插件，二者不可同时使用。识别平台后先阅读对应平台导航文件，再确认 SDK/会话类型选择。
 
 ## 输入确认
 
-写集成代码前必须确定**平台、会话类型、业务场景**。SDK 选择只有在用户明确指定时才是输入约束，否则由五层决策框架决定。用户明确选择 IMLib 时记录该约束并从第 3 层开始，不再执行 IMKit 的第 1、2 层评估；只有需要切换到 IMKit 时才说明权衡并获得同意。优先从项目和用户描述推断；无法推断时只问一个简短问题。多会话类型需求要说明每种类型的职责。现有融云初始化、连接或会话使用视为已确认，只询问新增或变更值。
+写集成代码前必须确定**平台、会话类型、业务场景**。SDK 选择只有在用户明确指定时才是输入约束，否则由五层决策框架决定。用户明确选择 IMLib 时记录该约束并从第 3 层开始，不再执行 IMKit 的第 1、2 层评估；只有需要切换到 IMKit 时才说明权衡并获得同意。React Native 没有官方 IMKit；uni-app 还必须确认采用 Web IMKit 还是 `RCUniIMV2` 原生插件，因为两者不能同时集成。优先从项目和用户描述推断；无法推断时只问一个简短问题。多会话类型需求要说明每种类型的职责。现有融云初始化、连接或会话使用视为已确认，只询问新增或变更值。
 
 凭据前置条件：可运行初始化需要 App Key 和 Token；绝不能在客户端放 App Secret、签名逻辑或特权 Token 生成代码；缺 App Key 时索取或提供明确的不可运行脚手架；缺 Token 时接入服务端变量或标记占位符。
 
@@ -70,7 +72,7 @@
 
 使用 IMKit 时，优先确认目标组件由 IMKit 提供还是应用实现；需要替换 IMKit 内置行为时，优先使用该版本文档化的覆盖、slot、hook 或事件，不要在外层重复创建同类组件。仅调整样式或使用 IMKit 原生组件时，不需要填写所有权表。
 
-采用 IMKit 与 IMLib/应用自有 UI 混合方案，或存在重复组件、职责不清时，填写下表并确保每个组件只有一个所有者：
+采用 IMKit 与 IMLib/应用自有 UI 混合方案，或存在重复组件、职责不清时，填写下表并确保每个组件只有一个所有者。uni-app 的 RCUIKit 页面/组件由 RCUIKit 源码负责；使用原生插件 IMLib 时则由应用负责全部 UI：
 
 | 组件 | 所有者 |
 | --- | --- |

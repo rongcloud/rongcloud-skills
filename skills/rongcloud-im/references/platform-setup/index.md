@@ -12,6 +12,8 @@ IMKit 会话类型覆盖情况位于 SKILL.md。业务能力矩阵见[基础功�
 | Android | `platform-setup/android.md` |
 | iOS | `platform-setup/ios.md` |
 | Flutter | `platform-setup/flutter.md` |
+| React Native | `platform-setup/react-native.md` |
+| uni-app | `platform-setup/uni-app.md` |
 
 ## 获取官方文档（适用于所有平台）
 

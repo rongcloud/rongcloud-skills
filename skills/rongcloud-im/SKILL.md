@@ -3,7 +3,7 @@ name: rongcloud-im
 description: >-
   指导融云 IM 集成决策，包括会话类型选择（单聊、群组、超级群、聊天室）、SDK 选择（IMLib 或 IMKit）、平台配置、凭据管理和推送通知。构建聊天/消息功能、实现即时通讯、选择会话类型、集成 IMLib 或 IMKit、分析即时通讯截图，或咨询消息能力时使用。
 version: 1.0.1
-last_updated: 2026-08-28
+last_updated: 2026-09-09
 ---
 
 # 融云即时通讯 集成技能
@@ -25,7 +25,7 @@ last_updated: 2026-08-28
 | 平台专属配置 | 阅读对应平台说明 | `platform-setup/index.md` |
 | 凭据/Token 管理 | 参阅凭据参考 | `credentials-and-token.md` |
 
-用户未指定 SDK 时，对单聊/群组优先使用各平台 IMKit：先验证原生能力，再验证配置、主题、Hook 和组件扩展点。只有 IMKit 不覆盖目标会话类型，或原生能力与扩展点都无法满足需求时，才进入 IMLib 层。用户已明确选择 IMLib 时不适用该默认推荐。确定方案前始终交叉检查下面的覆盖表。
+用户未指定 SDK 时，对单聊/群组优先使用目标平台可用的 IMKit：先验证原生能力，再验证配置、主题、Hook 和组件扩展点。React Native 没有官方 IMKit；uni-app 需在 Web IMLib + IMKit 与原生插件 IMLib 之间二选一。只有 IMKit 不覆盖目标会话类型，或原生能力与扩展点都无法满足需求时，才进入 IMLib 层。用户已明确选择 IMLib 时不适用该默认推荐。确定方案前始终交叉检查下面的覆盖表。
 
 ## IMKit 会话类型覆盖情况
 
@@ -37,8 +37,12 @@ IMKit 在各平台只内置支持部分会话类型。未覆盖的类型使用 I
 | Android | ✅ | ✅ | ❌ 使用 IMLib | ❌ 使用 IMLib |
 | iOS | ✅ | ✅ | ❌ 使用 IMLib | ❌ 使用 IMLib |
 | Flutter | ✅ | ✅ | ❌ 使用 IMLib | ❌ 使用 IMLib |
+| React Native | ❌ 使用 IMLib | ❌ 使用 IMLib | ❌ 使用 IMLib | ❌ 使用 IMLib |
+| uni-app IMKit | ✅ | ✅ | ❌ 使用 Web IMLib | ❌ 使用 Web IMLib |
 
 混合请求（例如 Web 群组 + 聊天室）应对覆盖部分使用 IMKit，其余使用 IMLib，并明确拆分。
+
+uni-app 的“IMKit”行仅适用于 Web IMLib + RCUIKit 方案；若改用 `RCUniIMV2` 原生插件，则整套 UI 能力按 IMLib 处理，且两种方案不能同时集成。
 
 ## 群聊能力
 

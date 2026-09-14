@@ -2,7 +2,7 @@
 
 用于快速集成[融云即时通讯（IM）](https://www.rongcloud.cn/product/im) 的 coding agent 技能。本技能指导 AI 编程助手完成即时通讯集成，包括会话类型选择、IMLib 与 IMKit 决策、平台配置、凭据管理、推送通知和常见集成模式。
 
-**支持平台：** Android、iOS、Web、Flutter
+**支持平台：** Android、iOS、Web、Flutter、React Native、uni-app
 
 ## 快速链接
 

@@ -18,6 +18,14 @@
 
 **仓库**：`https://github.com/rongcloud/flutter-im-kit.git`
 
+## uni-app
+
+**仓库**：`https://github.com/rongcloud/rc-uikit-uniapp`
+
+## React Native
+
+**仓库**：官方未提供 React Native IMKit；React Native 集成使用 IMLib，由应用自行实现 UI。
+
 ## 使用方式
 
 ### 何时使用

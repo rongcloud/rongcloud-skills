@@ -12,7 +12,7 @@ last_updated: 2026-09-09
 
 ## 集成路由
 
-**关键**：每个集成请求都必须加载 [SDK 集成决策框架](references/sdk-integration-decision-framework.md)。先识别项目平台和现有 SDK 状态，涉及能力边界或版本要求时先按 [功能清单使用规则](references/feature-lists.md) 获取清单，阅读官方文档并检查已安装 SDK 产物，再按 SDK 约束进入对应决策层。用户未指定 SDK 或明确选择 IMKit 时，从第 1 层开始；用户明确选择 IMLib 时，记录该约束并从第 3 层开始，不再评估第 1、2 层。只有当前约束无法满足需求、需要从 IMLib 切换到 IMKit 时，才解释权衡并获得用户同意。记录约束和决策层级后才能实现。
+**关键**：每个集成请求都必须加载 [SDK 集成决策框架](references/sdk-integration-decision-framework.md)。先识别项目平台和现有 SDK 状态；涉及能力边界或版本要求时，按 [功能清单使用规则](references/feature-lists.md) 获取对应清单或功能页，阅读官方文档并检查已安装 SDK 产物。按决策框架记录 SDK 约束和决策层级后再实现。
 
 | 构建内容 | 推荐方式 | 详情 |
 | --- | --- | --- |

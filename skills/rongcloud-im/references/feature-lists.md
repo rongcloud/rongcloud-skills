@@ -13,7 +13,7 @@
 | React Native | —（无官方 IMKit） | 按 `/react-native-imlib/` 各功能页和版本说明核对 |
 | uni-app | `/uni-app-imkit/feature-overview.md` | 按 `/uni-app-imlib/` 各功能页和版本说明核对 |
 
-从技能根目录执行 `bash scripts/fetch-docs.sh <清单路径>` 获取并阅读缓存。这些路径通常未收录在 `references/llms.txt` 中。缓存首行必须是 `# 功能列表`；若为 HTML 首页，说明下载源返回了错误内容，不得用于能力判断。React Native 和 uni-app IMLib 当前没有可用的专属清单，应直接读取对应功能页和版本说明；uni-app IMKit 使用官方 `feature-overview.md` 及页面/组件文档。
+从技能根目录执行 `bash scripts/fetch-docs.sh <清单路径>` 获取并阅读缓存。确认缓存是目标 Markdown 文档而非 HTML 首页；传统清单标题为 `# 功能列表`，uni-app IMKit 的概览标题为 `# 功能概览`。React Native 和 uni-app IMLib 没有可用的专属清单，应读取对应功能页和版本说明。
 
 ### 使用规则
 

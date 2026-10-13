@@ -2,7 +2,7 @@
 
 当截图或原型包含超出基础消息时间线的现代即时通讯功能（自聊、贴纸、定时发送、回应、链接预览、文件夹、语音消息、匿名转发等）时加载本文件。
 
-⚠️ 行表示本技能尚未记录官方文档。写实现代码前，应搜索 `references/llms.txt`，运行 `bash scripts/fetch-docs.sh <path>`，或将能力标为应用层并明确列出待办。
+表中“已确认”仅表示 IMKit 实现模式已有依据，不代表目标平台或已安装版本支持；使用前按对应功能页和版本核对。⚠️ 行表示本技能尚未记录官方文档。写实现代码前，应搜索 `references/llms.txt`，运行 `bash scripts/fetch-docs.sh <path>`，或将能力标为应用层并明确列出待办。
 
 ## 快速映射
 
@@ -27,7 +27,7 @@
 
 ## 使用方法
 
-截图清点并丢弃非聊天内容后，将每项功能映射到上表，再合并到 `integration-workflow.md` 的差距表：SDK 内置对应 Built-in；可配置能力对应 Configurable；应用层 UI 对应 Application chrome；服务端能力保留 Application-server；跨技能/范围外内容放入最终待办的范围外部分；⚠️ 项目在验证前标为 Pending review。
+截图清点并丢弃非聊天内容后，将每项功能映射到上表，再合并到 `integration-workflow.md` 的差距表：目标平台确认的 SDK 内置能力对应 Built-in；可配置能力对应 Configurable；应用层 UI 对应 Application chrome；服务端能力保留 Application-server；跨技能/范围外内容放入最终待办的范围外部分；未核对的平台能力和 ⚠️ 项在验证前标为 Pending review。
 
 ## 消息扩展还是自定义消息类型
 

@@ -18,7 +18,7 @@
 - 适用于 Android/iOS 原生 App，不提供聊天 UI；页面和交互由应用实现。
 - 在 DCloud 插件市场安装原生插件 `RCUniIMV2`（插件 ID 9227），在 `manifest.json` 添加后制作自定义调试基座；再安装 `RongCloud-IMWrapper-V2`（插件 ID 9225）并从 `@/uni_modules/RongCloud-IMWrapper-V2/js_sdk/RCIMEngine` 导入。
 - 初始化使用 `RCIMIWEngine.create(appKey, options)`，设置消息/连接监听后调用 `connect(token, timeout, callback)`；`RCIMIWEngineOptions` 可配置数据中心、导航、文件、统计和推送开关。
-- 原生插件方案不能与 uni-app IMKit 同时使用。需要 H5/小程序 UI 时选 IMKit；需要原生 IMLib 能力（例如聊天室或超级群）时选原生插件，并自行实现 UI。
+- 原生插件方案不能与 uni-app IMKit 同时使用。需要 H5/小程序 UI 时选 IMKit；仅面向 Android/iOS App 且需要原生插件能力时，评估原生插件并自行实现 UI。聊天室、超级群可先按上文所述核对 Web IMLib 路线。
 - 官方迁移说明指出 5.2.4、5.4.0 存在较大接口/回调变化，升级时必须阅读迁移文档并核对项目版本。
 
 两种方案都遵守同一安全规则：App Secret、签名逻辑和 Token 生成仅部署在应用服务端，客户端只请求服务端 Token 并传给 SDK。
